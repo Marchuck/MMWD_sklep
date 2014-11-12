@@ -10,9 +10,7 @@
 Droga::Droga() {
 }
 
-Droga::Droga(const Droga& orig) {
-}
+Droga::Droga(const Droga& orig) {}
 
-Droga::~Droga() {
-}
+Droga::~Droga() {}
 

@@ -32,11 +32,6 @@ Magazyn::~Magazyn() {
     public int ZwrocZapasProduktu(int j){
         return zapas_produktow[j];
     }
-    /**
-     * 
-     * @return true jeśli trzeba kontynuować podróż po sklepach,
-     *          false jeśli sklep jest już zaopatrzony
-     */
 
     public void UstalDrogiDoInnychMagazynow(float[][] macierz_drog){
         for(int j = 0; j < MAX_LICZBA_MAGAZYNOW;j++){

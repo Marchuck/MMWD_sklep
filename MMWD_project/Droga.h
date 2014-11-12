@@ -13,6 +13,7 @@ public:
     Droga(){
         sciezka = new int[1];
         sciezka[0] = 0;//magazyn nr 0
+
         aktualny_koszt_drogi =0;
     }
     Droga(const Droga& orig);

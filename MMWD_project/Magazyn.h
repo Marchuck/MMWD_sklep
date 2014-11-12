@@ -19,6 +19,7 @@ public:
     static const int MAX_ILOSC_DANEGO_PRODUKTU = 20;
     static const double ZAKAZANA_WARTOSC_DROGI = 99999.99f; //imitacja nieskończoności
     static int zapotrzebowanie_na_produkty[MAX_LICZBA_PRODOKTOW];
+
     const int ID(){ return ID;}
     Magazyn(int id, int rzeczy){
         ID=id;

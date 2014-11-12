@@ -36,7 +36,6 @@ public:
     }
     double Cena(){ return cena;}
     int Ilosc(){   return ilosc;}
-
 private:
     int ilosc;
     double cena;
