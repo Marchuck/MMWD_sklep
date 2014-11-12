@@ -19,7 +19,24 @@ public:
         this->ilosc = ilosc;
     }
     virtual ~Produkt(){}
-    int KupProdukt(int ID_produktu, double tyle);
+    int KupProdukt(int tyle){
+            // 1) kupujemy cały zapas(będziemy jeszcze musieli dokupić produkt)
+            if(tyle > ilosc){
+                int tmp = ilosc;
+                ilosc=0;
+                return tmp;
+            }
+            else{//kupujemy żądaną ilość
+                ilosc -= tyle;
+                return tyle;
+            }
+    }
+    void ustalCene(double cena){
+    	this->cena = cena;
+    }
+    double Cena(){ return cena;}
+    int Ilosc(){   return ilosc;}
+
 private:
     int ilosc;
     double cena;
