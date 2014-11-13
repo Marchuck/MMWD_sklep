@@ -10,6 +10,9 @@
 
 class Droga {
 public:
+	static const double ZakazanaWartoscDrogi = 999999.99;
+	static const int MaksymalnaIloscIteracji = 20;
+
     Droga(){
         sciezka = new int[1];
         sciezka[0] = 0;//magazyn nr 0
@@ -20,28 +23,33 @@ public:
     virtual ~Droga(){
         delete [] sciezka;
     }
-    
-    void dodajDoSciezki(int ID_sklepu){
-        int dlugosc = dlugoscSciezki();
-        if(sciezka[dlugosc-1]!=ID_sklepu){
+
+    void dodaj(int ID_sklepu){
+        int dl = dlugosc();
+        if(sciezka[dl-1]!=ID_sklepu){
             int* tmp = sciezka;
             delete [] sciezka;
-            sciezka = new int[dlugosc+1];
-            for(int i = 0; i < dlugosc; i++)
+            sciezka = new int[dl+1];
+            for(int i = 0; i < dl; i++)
                 sciezka[i] = tmp[i];
-            sciezka[dlugosc] = ID_sklepu;
+            sciezka[dl] = ID_sklepu;
         }
     }
-private:
-    int dlugoscSciezki(){
-        int i = 0;
-        while(sciezka[i++])
-            ;
-        return i;
+    int dlugosc(){
+            int i = 0;
+            while(sciezka[i++])
+                ;
+            return i;
     }
+    void rysuj(){
+    	std::cout << "(";
+    	for(int i = 0 ; i < dlugosc();i++)
+    		std::cout << sciezka[i]<<", ";
+    	std::cout << ")\n";
+    }
+private:
     int* sciezka;
     double aktualny_koszt_drogi;
-    
 };
 
 #endif	/* DROGA_H */
