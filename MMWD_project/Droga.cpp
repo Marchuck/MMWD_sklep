@@ -6,11 +6,7 @@
  */
 
 #include "Droga.h"
-
-Droga::Droga() {
-}
-
 Droga::Droga(const Droga& orig) {}
 
-Droga::~Droga() {}
+
 
