@@ -1,17 +1,15 @@
-/* 
- * File:   main.cpp
- * Author: lukasz
- *
- * Created on 12 listopad 2014, 11:30
- */
 
-#include <cstdlib>
+
 #include <iostream>
-
+#include<Magazyn.h>
+#include<Produkt.h>
+#include<Droga.h>
+#include"Problem_zaopatrzenia.h"
 using namespace std;
 
-int main(int argc, char** argv) {
-	std::cout<<"działa";
-    return 0;
+int main() {
+//	Problem_zaopatrzenia(liczba_magazynów, średnia_długość_drogi, średnia_cena_produktu)
+	Problem_zaopatrzenia *problem = new Problem_zaopatrzenia(5,30,20);
+	problem->Start();
+	return 0;
 }
-
